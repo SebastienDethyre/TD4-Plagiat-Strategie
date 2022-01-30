@@ -17,19 +17,13 @@ public class LevenshteinStrategy implements EditDistanceStrategy {
      * @param String t2 
      * @return
      */
-    public Double computeDistance(void String t1, void String t2) {
-        // TODO implement here
-        return null;
-    }
+    
 
-    /**
-     * @param String t1 
-     * @param String t2 
-     * @return
-     */
-    public Double computeDistance(void String t1, void String t2) {
-        // TODO implement here
-        return null;
-    }
+	@Override
+	public Double computeDistance(String t1) {
+		CorpusText c = new CorpusText();
+		return (double) t1.compareToIgnoreCase(c.getText(1));
+	}
+
 
 }

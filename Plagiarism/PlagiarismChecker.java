@@ -6,37 +6,31 @@ import java.util.*;
  */
 public class PlagiarismChecker {
 
-    /**
-     * Default constructor
-     */
+	private int treshold;
+    private EditDistanceStrategy mesStrat;
+    private String t;
     public PlagiarismChecker() {
     }
 
-    /**
-     * 
-     */
-    private Int treshold;
-
-
-    /**
-     * 
-     */
-    public Set<EditDistanceStrategy> mesStrat;
-
+    
+    public void setTreshold(int treshold) {
+    	this.treshold = treshold;
+    }
     /**
      * @param checkerStategy
      */
     public void setCheckerStrategy(EditDistanceStrategy checkerStategy) {
-        // TODO implement here
+        mesStrat = checkerStategy;
     }
 
     /**
      * @param String t 
-     * @return
+     * @return boolean
      */
-    public Boolean checkPlagiarism(void String t) {
-        // TODO implement here
-        return null;
+    public boolean checkPlagiarism(String t) {
+        if(mesStrat.computeDistance(t) < treshold)
+        	return false;
+        return true;
     }
 
 }
