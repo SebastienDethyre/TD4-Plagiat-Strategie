@@ -1,3 +1,5 @@
+package Plagiarism;
+
 import java.util.*;
 
 public class PlagiarismChecker {
