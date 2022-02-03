@@ -1,5 +1,7 @@
 package Comparator;
 
+import java.util.List;
+
 public class Etudiant {
 	private String nom;
 	private String prenom;
@@ -16,4 +18,5 @@ public class Etudiant {
 	public int getId() {
 		return id;
 	}
+	
 }

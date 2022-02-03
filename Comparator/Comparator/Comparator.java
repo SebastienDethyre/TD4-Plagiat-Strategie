@@ -1,5 +1,5 @@
 package Comparator;
 
 public abstract class Comparator {
-	public abstract void compare(Etudiant etud1, Etudiant Etud2);
+	public abstract int compare(Etudiant etud1, Etudiant Etud2);
 }

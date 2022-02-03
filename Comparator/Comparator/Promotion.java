@@ -3,12 +3,11 @@ package Comparator;
 import java.util.ArrayList;
 import java.util.List;
 
-import Plagiarism.EditDistanceStrategy;
 import fr.univamu.iut.exo3.Composant;
 
 public class Promotion {
 	//private Etudiant[] Etud;
-	private List<Etudiant> etud = new ArrayList<>();
+	private List<Etudiant> etudiants = new ArrayList<>();
 	private Comparator myComp;
 	private int treshold=0;
    
@@ -19,28 +18,31 @@ public class Promotion {
     }
 	
 	public Etudiant add(Etudiant e) {
-		etud.add(e);
+		etudiants.add(e);
 		return e;		
 	}
 	
 	public Etudiant remove(Etudiant e) {
-		etud.remove(e);
+		etudiants.remove(e);
 		return e;		
 	}
 	
 	public Etudiant getEtudiant(int index) {
-		return etud.get(index);
+		return etudiants.get(index);
 	}
+	
 	public void setStrategy(Comparator c) {
         myComp = c;
     }
 
-    public void execute(Etudiant etud1, Etudiant etud2) {
-    	for (int i=0;i<etud.size();++i)
+    public void execute() {
+    	for (int i=0;i<etudiants.size();++i)
     	{
-    	if(myComp.compare(etud.get(i), etud.get(i+1)) < treshold)
-        	etud.swap(etud, etud.get(i), etud.get(i+1));
-        return true;
+    		int temp =myComp.compare(etudiants.get(i), etudiants.get(i+1));
+    	System.out.println(temp);
+    			
+        
     	}
+    	
     }
 }
