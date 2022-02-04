@@ -7,6 +7,12 @@ public class Etudiant {
 	private String prenom;
 	private int id;
 	
+	Etudiant(String nom, String prenom, int id){
+		this.nom=nom;
+		this.prenom=prenom;
+		this.id=id;
+	}
+	
 	public String getNom() {
 		return nom;
 	}

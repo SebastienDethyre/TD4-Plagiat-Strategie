@@ -37,6 +37,10 @@ public class Promotion {
 
     public void execute() {
     	Collections.sort(etudiants,  myComp);
+    	for (Etudiant e:etudiants)
+    	{
+    		System.out.println(e.getNom());
+    	}	
     	//for (int i=0;i<etudiants.size();++i)
     	//{
     		//int temp =myComp.compare(etudiants.get(i), etudiants.get(i+1));
