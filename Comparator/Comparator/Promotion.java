@@ -1,6 +1,7 @@
 package Comparator;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import fr.univamu.iut.exo3.Composant;
@@ -36,10 +37,11 @@ public class Promotion {
     }
 
     public void execute() {
-    	for (int i=0;i<etudiants.size();++i)
-    	{
-    		int temp =myComp.compare(etudiants.get(i), etudiants.get(i+1));
-    	System.out.println(temp);
+    	Collections.sort(etudiants, new ComparatorById());
+    	//for (int i=0;i<etudiants.size();++i)
+    	//{
+    		//int temp =myComp.compare(etudiants.get(i), etudiants.get(i+1));
+    	//System.out.println(temp);
     			
         
     	}
